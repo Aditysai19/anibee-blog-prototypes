@@ -3,334 +3,317 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AniBee Blog – Early learning, parenting tips, and preschool guidance." />
-  <title>AniBee Blog - Is Your Child Ready for Preschool?</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="AniBee Preschool Blog – Early learning, parenting tips, and preschool guidance." />
+  <title>Blog | AniBee Preschool</title>
+  
+  <!-- Fonts from your website -->
+  <link href="https://fonts.googleapis.com/css2?family=Salsa&family=Mulish:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    /* CSS Variables from your website */
     :root {
-      --yellow: #FFD84D;
-      --cream: #FFF9EC;
-      --green: #2E8B57;
-      --text: #333;
+      /* Colors from your Elementor kit */
+      --e-global-color-primary: #2C4073;
+      --e-global-color-secondary: #FF6666;
+      --e-global-color-text: #70747F;
+      --e-global-color-accent: #FAB319;
+      --e-global-color-a867cb9: #FCF9F4;
+      --e-global-color-282dd9e: #FFFFFF;
+      --e-global-color-b3b5aa7: #2C40731A;
+      --e-global-color-daee806: #FE7162;
+      --e-global-color-79b5754: #223668;
+      --e-global-color-d866ad0: #2B3C6B;
+      
+      /* Typography from your website */
+      --e-global-typography-primary-font-family: "Salsa";
+      --e-global-typography-secondary-font-family: "Mulish";
+      --e-global-typography-text-font-family: "Mulish";
+      --e-global-typography-accent-font-family: "Salsa";
+      
+      /* Font sizes */
+      --e-global-typography-primary-font-size: 42px;
+      --e-global-typography-secondary-font-size: 20px;
+      --e-global-typography-text-font-size: 16px;
+      --e-global-typography-accent-font-size: 24px;
+      
+      /* Line heights */
+      --e-global-typography-primary-line-height: 1.19em;
+      --e-global-typography-secondary-line-height: 1.25em;
+      --e-global-typography-text-line-height: 2em;
+      --e-global-typography-accent-line-height: 1.458em;
+      
+      /* Font weights */
+      --e-global-typography-primary-font-weight: 500;
+      --e-global-typography-secondary-font-weight: 600;
+      --e-global-typography-text-font-weight: 500;
+      --e-global-typography-accent-font-weight: 500;
+      
+      /* Spacing */
+      --container-max-width: 1200px;
+      --widgets-spacing: 20px;
+      
+      /* Other variables */
+      --border-radius: 0;
+      --background-transition: 0.3s;
+      --border-transition: 0.3s;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
 
     body {
-      font-family: 'Nunito', sans-serif;
-      color: var(--text);
-      line-height: 1.7;
-      background: #fff;
+      font-family: var(--e-global-typography-text-font-family);
+      color: var(--e-global-color-text);
+      line-height: var(--e-global-typography-text-line-height);
+      font-size: var(--e-global-typography-text-font-size);
+      font-weight: var(--e-global-typography-text-font-weight);
+      background-color: var(--e-global-color-282dd9e);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* HEADER */
-    header {
-      background: var(--cream);
-      padding: 24px 16px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-family: 'Fredoka One', cursive;
-      color: var(--green);
-      font-size: 2.2rem;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    /* CONTAINER */
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    /* TAG */
-    .tag {
-      background: var(--yellow);
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-
-    /* FEATURED */
-    .featured {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .featured img {
-      width: 100%;
-      border-radius: 18px;
-    }
-
-    .featured h3 {
-      font-size: 1.6rem;
-    }
-
-    /* BLOG GRID */
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      padding: 20px;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      margin: 10px 0;
-    }
-
-    .read {
-      font-weight: 600;
-      color: var(--green);
-    }
-
-    /* BUTTON */
-    .btn {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 12px 24px;
-      background: var(--yellow);
-      border-radius: 30px;
-      color: #000;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    /* BRAND MARQUEE */
-    .brand-marquee {
+    /* Container matching Elementor structure */
+    .e-con {
+      --container-max-width: 1200px;
+      --content-width: min(100%, var(--container-max-width, 1140px));
+      --width: 100%;
+      --padding-block-start: 60px;
+      --padding-block-end: 60px;
+      --padding-inline-start: 20px;
+      --padding-inline-end: 20px;
       position: relative;
-      overflow: hidden;
-      height: 320px;
-      background: var(--cream);
-      margin: 80px 0;
+      width: var(--width);
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: var(--padding-block-start) var(--padding-inline-end) var(--padding-block-end) var(--padding-inline-start);
     }
 
-    .marquee-track {
+    /* HEADER – Logo on Left, Title Center */
+    .site-header {
+      background: var(--e-global-color-a867cb9);
+      min-height: 120px;
       display: flex;
-      width: max-content;
-      animation: scroll-marquee 35s linear infinite;
-    }
-
-    .marquee-track img {
-      width: 280px;
-      height: 200px;
-      object-fit: cover;
-      margin-right: 20px;
-      border-radius: 16px;
-      opacity: 0.35;
-    }
-
-    .brand-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      border-bottom: 2px solid var(--e-global-color-accent);
+    }
+
+    .logo-container {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 80px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+    }
+
+    .header-center {
+      flex: 1;
       text-align: center;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .brand-overlay img {
-      width: 140px;
-      margin-bottom: 12px;
-    }
-
-    .brand-overlay h3 {
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.6rem;
-      color: var(--green);
-    }
-
-    .brand-overlay p {
-      font-size: 0.95rem;
-      max-width: 260px;
-    }
-
-    @keyframes scroll-marquee {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-
-    /* NEWSLETTER */
-    .newsletter {
-      background: var(--cream);
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .newsletter input {
-      padding: 12px;
-      width: 260px;
-      max-width: 80%;
-      border-radius: 30px;
-      border: 1px solid #ccc;
-    }
-
-    .newsletter button {
-      padding: 12px 20px;
-      border-radius: 30px;
-      border: none;
-      background: var(--yellow);
-      font-weight: 700;
-      margin-left: 8px;
-      cursor: pointer;
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--green);
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .featured { grid-template-columns: 1fr; }
-      .hero h2 { font-size: 1.6rem; }
-      .brand-marquee { height: 260px; }
-      .marquee-track img { width: 220px; height: 160px; }
-      .brand-overlay img { width: 110px; }
-    }
-
-    /* ARTICLE CONTENT STYLES */
-    .article-content {
-      max-width: 800px;
-      margin: 60px auto;
       padding: 0 20px;
     }
 
-    .article-content h1 {
-      font-family: 'Fredoka One', cursive;
-      color: var(--green);
-      font-size: 2.5rem;
+    .header-center h1 {
+      font-family: var(--e-global-typography-primary-font-family);
+      font-size: 36px;
+      color: var(--e-global-color-primary);
+      margin: 0 0 8px 0;
+      letter-spacing: -1px;
+      line-height: 1.2;
+    }
+
+    .header-center p {
+      font-family: var(--e-global-typography-secondary-font-family);
+      font-size: 18px;
+      color: var(--e-global-color-text);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .header-right {
+      flex: 0 0 180px;
+      text-align: right;
+    }
+
+    /* Article Header */
+    .article-header {
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .article-text-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .article-image {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .article-image img {
+      width: 120%;
+      height: 500px;
+      object-fit: relative ;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(44, 64, 115, 0.15);
+    }
+
+    .article-category {
+      display: inline-block;
+      background: var(--e-global-color-accent);
+      color: var(--e-global-color-primary);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-family: var(--e-global-typography-secondary-font-family);
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .article-title {
+      font-family: var(--e-global-typography-primary-font-family);
+      color: var(--e-global-color-primary);
+      font-size: 45px;
+      font-weight: 500;
+      line-height: 1.2em;
+      letter-spacing: -1.3px;
       margin-bottom: 30px;
-      text-align: center;
     }
 
-    .article-content h2 {
-      font-family: 'Fredoka One', cursive;
-      color: var(--green);
-      margin: 50px 0 20px;
-      font-size: 1.8rem;
-      border-bottom: 3px solid var(--yellow);
-      padding-bottom: 10px;
-    }
-
-    .article-content h3 {
-      font-family: 'Fredoka One', cursive;
-      color: var(--green);
-      margin: 40px 0 15px;
-      font-size: 1.4rem;
+    /* Article Content Styling */
+    .article-content {
+      font-family: var(--e-global-typography-text-font-family);
+      color: var(--e-global-color-text);
+      line-height: var(--e-global-typography-text-line-height);
+      font-size: var(--e-global-typography-text-font-size);
     }
 
     .article-content p {
-      margin-bottom: 25px;
-      font-size: 1.1rem;
-      color: var(--text);
+      margin-bottom: 30px;
+    }
+
+    .article-content h2 {
+      font-family: var(--e-global-typography-primary-font-family);
+      color: var(--e-global-color-primary);
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 1.2em;
+      margin: 50px 0 25px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid var(--e-global-color-accent);
+      letter-spacing: -0.8px;
+    }
+
+    .article-content h3 {
+      font-family: var(--e-global-typography-secondary-font-family);
+      color: var(--e-global-color-d866ad0);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.3em;
+      margin: 40px 0 20px;
     }
 
     .article-content ul {
       margin: 25px 0 25px 40px;
+      list-style: none;
     }
 
     .article-content li {
       margin-bottom: 15px;
-      color: var(--text);
-      font-size: 1.1rem;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .article-content li:before {
+      content: "•";
+      color: var(--e-global-color-accent);
+      font-size: 24px;
+      position: absolute;
+      left: 0;
+      top: -2px;
     }
 
     .article-content strong {
-      color: var(--green);
-      font-weight: 700;
-    }
-
-    .intro-quote {
-      background: var(--cream);
-      padding: 30px;
-      border-radius: 16px;
-      margin: 40px 0;
-      border-left: 5px solid var(--yellow);
-      font-size: 1.2rem;
-      font-style: italic;
-      color: var(--text);
-    }
-
-    .highlight-box {
-      background: linear-gradient(135deg, #FFF9EC 0%, #FFD84D20 100%);
-      padding: 35px;
-      border-radius: 20px;
-      margin: 40px 0;
-      border: 2px solid var(--yellow);
-      text-align: center;
-    }
-
-    .highlight-number {
-      font-family: 'Fredoka One', cursive;
-      font-size: 4rem;
-      color: var(--green);
-      margin-bottom: 10px;
-      line-height: 1;
-    }
-
-    .highlight-text {
-      font-size: 1.3rem;
-      color: var(--text);
+      color: var(--e-global-color-primary);
       font-weight: 600;
     }
 
-    .faq-section {
-      background: var(--cream);
+    /* Highlight Box */
+    .highlight-stat {
+      background: var(--e-global-color-a867cb9);
+      border-left: 5px solid var(--e-global-color-accent);
       padding: 40px;
-      border-radius: 20px;
-      margin: 60px 0;
-      border: 2px solid rgba(46, 139, 87, 0.2);
+      border-radius: 10px;
+      margin: 40px 0;
+      text-align: center;
     }
 
-    .faq-section h3 {
-      font-family: 'Fredoka One', cursive;
-      color: var(--green);
-      font-size: 2rem;
-      margin-bottom: 40px;
+    .stat-number {
+      font-family: var(--e-global-typography-primary-font-family);
+      color: var(--e-global-color-secondary);
+      font-size: 65px;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 15px;
+      letter-spacing: -1.9px;
+    }
+
+    .stat-text {
+      font-family: var(--e-global-typography-secondary-font-family);
+      color: var(--e-global-color-primary);
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.3em;
+    }
+
+    /* Quote Box */
+    .quote-box {
+      background: var(--e-global-color-b3b5aa7);
+      padding: 30px;
+      border-radius: 10px;
+      margin: 40px 0;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.6em;
+      color: var(--e-global-color-primary);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background: var(--e-global-color-a867cb9);
+      padding: 50px;
+      border-radius: 15px;
+      margin: 60px 0;
+    }
+
+    .faq-title {
+      font-family: var(--e-global-typography-primary-font-family);
+      color: var(--e-global-color-primary);
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 1.2em;
       text-align: center;
+      margin-bottom: 40px;
+      letter-spacing: -1px;
     }
 
     .faq-item {
       margin-bottom: 30px;
       padding-bottom: 30px;
-      border-bottom: 2px dashed rgba(46, 139, 87, 0.2);
+      border-bottom: 2px dashed var(--e-global-color-b3b5aa7);
     }
 
     .faq-item:last-child {
@@ -340,380 +323,633 @@
     }
 
     .faq-question {
+      font-family: var(--e-global-typography-secondary-font-family);
+      color: var(--e-global-color-primary);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
       display: flex;
       align-items: flex-start;
       gap: 15px;
-      margin-bottom: 15px;
     }
 
-    .faq-icon {
+    .faq-q {
+      background: var(--e-global-color-secondary);
+      color: white;
       width: 30px;
       height: 30px;
-      background: var(--yellow);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
-      color: var(--green);
       font-weight: bold;
-      font-size: 0.9rem;
-    }
-
-    .faq-item strong {
-      color: var(--green);
-      font-size: 1.2rem;
-      flex: 1;
+      flex-shrink: 0;
     }
 
     .faq-answer {
       margin-left: 45px;
-      color: var(--text);
-      font-size: 1.1rem;
+      color: var(--e-global-color-text);
     }
 
-    .program-list {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      margin: 30px 0;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      border-left: 5px solid var(--green);
+    .faq-answer strong {
+      color: var(--e-global-color-primary);
     }
 
-    .program-list h4 {
-      font-family: 'Fredoka One', cursive;
-      color: var(--green);
-      margin-bottom: 20px;
-      font-size: 1.3rem;
+    /* Related Articles */
+    .related-section {
+      margin: 80px 0 60px;
     }
 
-    .program-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-    }
-
-    .program-item {
-      background: var(--cream);
-      padding: 15px;
-      border-radius: 12px;
+    .section-title {
+      font-family: var(--e-global-typography-primary-font-family);
+      color: var(--e-global-color-primary);
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 1.2em;
       text-align: center;
-      font-weight: 600;
-      color: var(--green);
+      margin-bottom: 50px;
+      letter-spacing: -1px;
     }
 
-    /* HEADER FIX – RESPONSIVE & LOGO LEFT */
-.site-header {
-  background: var(--cream);
-  min-height: 120px;
-  display: flex;
-  align-items: center;
-  padding: 24px 16px;
-}
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
 
-.header-left,
-.header-right {
-  flex: 1;
-}
+    .blog-card {
+      background: var(--e-global-color-282dd9e);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(44, 64, 115, 0.1);
+      transition: all 0.3s ease;
+    }
 
-.header-left img {
-  width: 140px;
-  height: auto;
-}
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(44, 64, 115, 0.15);
+    }
 
-.header-center {
-  flex: 2;
-  text-align: center;
-}
+    .card-image {
+      height: 220px;
+      overflow: hidden;
+    }
 
-.header-center h1 {
-  font-family: 'Fredoka One', cursive;
-  color: var(--green);
-  font-size: 2.2rem;
-  margin: 0;
-}
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
 
-.header-center p {
-  margin: 4px 0 0;
-  font-size: 14px;
-  color: #555;
-}
+    .blog-card:hover .card-image img {
+      transform: scale(1.05);
+    }
 
-/* TABLET */
-@media (max-width: 768px) {
-  .header-left img {
-    width: 120px;
-  }
+    .card-content {
+      padding: 25px;
+    }
 
-  .header-center h1 {
-    font-size: 1.8rem;
-  }
-}
+    .card-category {
+      display: inline-block;
+      background: var(--e-global-color-accent);
+      color: var(--e-global-color-primary);
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-family: var(--e-global-typography-secondary-font-family);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
 
-/* MOBILE */
-@media (max-width: 480px) {
-  .site-header {
-    padding: 16px;
-  }
+    .card-title {
+      font-family: var(--e-global-typography-secondary-font-family);
+      color: var(--e-global-color-primary);
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.3em;
+      margin-bottom: 15px;
+    }
 
-  .header-left img {
-    width: 100px;
-  }
+    .card-excerpt {
+      color: var(--e-global-color-text);
+      margin-bottom: 20px;
+      font-size: 15px;
+      line-height: 1.6em;
+    }
 
-  .header-center h1 {
-    font-size: 1.5rem;
-  }
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--e-global-typography-secondary-font-family);
+      color: var(--e-global-color-secondary);
+      font-weight: 600;
+      text-decoration: none;
+      transition: gap 0.3s ease;
+    }
 
-  .header-center p {
-    font-size: 12px;
-  }
-} 
+    .read-more:hover {
+      gap: 12px;
+    }
+
+    /* Newsletter Section */
+    .newsletter-section {
+      background: var(--e-global-color-a867cb9);
+      padding: 60px;
+      border-radius: 15px;
+      text-align: center;
+      margin: 80px 0;
+    }
+
+    .newsletter-title {
+      font-family: var(--e-global-typography-primary-font-family);
+      color: var(--e-global-color-primary);
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 1.2em;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .newsletter-text {
+      color: var(--e-global-color-text);
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: 17px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      min-width: 250px;
+      padding: 18px 25px;
+      border: 2px solid transparent;
+      border-radius: 30px;
+      font-family: var(--e-global-typography-text-font-family);
+      font-size: 16px;
+      background: var(--e-global-color-282dd9e);
+      transition: all 0.3s ease;
+    }
+
+    .newsletter-input:focus {
+      outline: none;
+      border-color: var(--e-global-color-accent);
+      box-shadow: 0 0 0 3px rgba(250, 179, 25, 0.1);
+    }
+
+    .newsletter-button {
+      background: var(--e-global-color-secondary);
+      color: var(--e-global-color-282dd9e);
+      border: none;
+      padding: 18px 35px;
+      border-radius: 30px;
+      font-family: var(--e-global-typography-secondary-font-family);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .newsletter-button:hover {
+      background: var(--e-global-color-daee806);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(254, 113, 98, 0.2);
+    }
+
+    /* Footer */
+    .blog-footer {
+      background: var(--e-global-color-primary);
+      color: var(--e-global-color-282dd9e);
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .footer-text {
+      font-family: var(--e-global-typography-text-font-family);
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    /* Responsive Design - Tablet */
+    @media (max-width: 1024px) {
+      :root {
+        --e-global-typography-primary-font-size: 28px;
+        --e-global-typography-accent-font-size: 18px;
+      }
+      
+      .site-header {
+        padding: 20px 30px;
+      }
+      
+      .logo {
+        height: 70px;
+        max-width: 150px;
+      }
+      
+      .header-center h1 {
+        font-size: 30px;
+      }
+      
+      .header-center p {
+        font-size: 16px;
+      }
+      
+      .article-title {
+        font-size: 35px;
+      }
+      
+      .article-content h2 {
+        font-size: 28px;
+      }
+      
+      .stat-number {
+        font-size: 50px;
+      }
+      
+      .blog-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    }
+
+    /* Responsive Design - Mobile */
+    @media (max-width: 767px) {
+      .e-con {
+        --padding-block-start: 40px;
+        --padding-block-end: 40px;
+      }
+      
+      .site-header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        gap: 15px;
+        min-height: auto;
+      }
+      
+      .logo-container {
+        order: 1;
+      }
+      
+      .header-center {
+        order: 2;
+        padding: 0;
+      }
+      
+      .header-right {
+        display: none;
+      }
+      
+      .logo {
+        height: 60px;
+        max-width: 130px;
+      }
+      
+      .header-center h1 {
+        font-size: 26px;
+      }
+      
+      .header-center p {
+        font-size: 14px;
+      }
+      
+      .article-header {
+        flex-direction: column;
+        gap: 30px;
+      }
+      
+      .article-image {
+        order: -1;
+      }
+      
+      .article-title {
+        font-size: 28px;
+      }
+      
+      .article-content h2 {
+        font-size: 24px;
+      }
+      
+      .stat-number {
+        font-size: 40px;
+      }
+      
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .faq-section,
+      .newsletter-section {
+        padding: 30px;
+      }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
+      
+      .newsletter-input {
+        min-width: 100%;
+      }
+      
+      .newsletter-button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* Responsive Design - Small Mobile */
+    @media (max-width: 480px) {
+      .site-header {
+        padding: 15px;
+      }
+      
+      .logo {
+        height: 50px;
+        max-width: 110px;
+      }
+      
+      .header-center h1 {
+        font-size: 22px;
+      }
+      
+      .header-center p {
+        font-size: 13px;
+      }
+      
+      .article-title {
+        font-size: 24px;
+      }
+      
+      .article-content h2 {
+        font-size: 20px;
+        margin: 40px 0 20px;
+      }
+      
+      .highlight-stat {
+        padding: 30px 20px;
+      }
+      
+      .stat-number {
+        font-size: 36px;
+      }
+      
+      .faq-title,
+      .section-title,
+      .newsletter-title {
+        font-size: 24px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
-
-<header class="site-header">
-  <!-- LEFT: Logo -->
-  <div class="header-left">
-    <img src="logo.jpeg" alt="AniBee Logo">
-  </div>
-
-  <!-- CENTER: Text -->
-  <div class="header-center">
-    <h1>AniBee Blog</h1>
-    <p>Ideas that support your child's early years</p>
-  </div>
-
-  <!-- RIGHT: Spacer (keeps center aligned) -->
-  <div class="header-right"></div>
-</header>
-  
-<section class="hero">
-  <h2>The AniBee Journal</h2>
-  <p>Trusted parenting tips and early learning guidance.</p>
-</section>
-
-<section class="featured container">
-  <img src="ready.png" alt="Child ready for preschool">
-  <div>
-    <span class="tag">Parenting Guide</span>
-    <h3>Is Your Child Ready for Preschool? A Guide to Mindful Early Learning</h3>
-    <p>Choosing the right preschool is one of the most important early decisions a parent makes.</p>
-    <a href="#article" class="btn">Read Article</a>
-  </div>
-</section>
-
-<!-- Article Content -->
-<div class="article-content" id="article">
-  <h1>Is Your Child Ready for Preschool? A Guide to Mindful Early Learning</h1>
-  
-  <div class="highlight-box">
-    <div class="highlight-number">90%</div>
-    <div class="highlight-text">of a child's brain develops before the age of five</div>
-  </div>
-  
-  <p>This staggering fact highlights why choosing the right environment during these foundational years is one of the most significant decisions a parent will ever make. For many families, the search for a "preschool near me" isn't just about finding a convenient location in Bangalore or Vellore—it is about finding a sanctuary that understands the weight of this responsibility.</p>
-
-  <h2>Understanding the Emotional Readiness of Your Little Bee</h2>
-  <p>When exploring top kindergarten schools in Bangalore, it is essential to consider your child's emotional readiness rather than just age. Some children adapt quickly to new environments, while others need more reassurance and time. At AniBee Preschool, we move beyond the standard search for a "preschool near me" by focusing on a smooth transition that fights separation anxiety through immersion in joyful activities. We recognize that mothers—both working and homemakers—often feel overwhelmed by choices; our goal is to provide a stress-free space where children feel successful in their first attempts at independence.</p>
-
-  <h2>Why Holistic Development Matters More Than Competition</h2>
-  <p>The best preschools in Bangalore are shifting focus from rigid instruction to holistic development. At AniBee, we don't encourage competition between children; instead, we inspire them to be better versions of themselves, pushing their own boundaries at their own pace. Our curriculum balances academic readiness with critical social and emotional growth.</p>
-  
-  <ul>
-    <li><strong>Language Skills:</strong> We foster communication through games like "Who is your best friend?" or discussing weekend adventures.</li>
-    <li><strong>Physical Strength:</strong> Activities such as "Bicycling in laydown position" or "Scissors activities" refine motor skills.</li>
-    <li><strong>Life Skills:</strong> We teach toddlers practical habits like "Folding the napkin" or "Identifying man-made and natural things" to build real-world confidence.</li>
-  </ul>
-
-  <h2>Mindful Practices to Secure Your Child's Future</h2>
-  <p>We believe the experiences a child has in these early years define their life choices later on. This is why we incorporate mindful practices into our daily routine to provide a stable, trauma-informed environment. From teaching kids to "chew with their mouth closed" to learning how to "empathize with others," we nurture the heart alongside the mind. Safety is a non-negotiable priority, with secure entries and CCTV monitoring ensuring your child is in safe hands while you focus on your day.</p>
-
-  <h2>Conclusion: Trusting Your Journey with AniBee</h2>
-  <p>Choosing a preschool is a significant milestone that requires looking beyond flashy facilities to find a safe, nurturing environment guided by caring educators. By prioritizing a school that respects your child's individuality and encourages curiosity without the pressure of competition, you are giving them the best possible start. At AniBee Preschool, we are dedicated to turning these formative years into a beautiful journey of growth and discovery.</p>
-
-  <div class="program-list">
-    <h4>Age-Appropriate Programs at AniBee</h4>
-    <div class="program-grid">
-      <div class="program-item">Play Group</div>
-      <div class="program-item">Nursery</div>
-      <div class="program-item">LKG</div>
-      <div class="program-item">UKG</div>
+  <!-- Header with Logo on Left -->
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="logo.jpeg" alt="AniBee Preschool Logo" class="logo">
     </div>
-  </div>
 
-  <div class="faq-section">
-    <h3>FAQ: Choosing the Best Preschool in Bangalore</h3>
-    
-    <div class="faq-item">
-      <div class="faq-question">
-        <div class="faq-icon">Q</div>
-        <strong>Q: What is the ideal teacher-to-child ratio for a preschool?</strong>
+    <div class="header-center">
+      <h1>AniBee Blog</h1>
+      <p>Ideas that support your child's early years</p>
+    </div>
+
+    <div class="header-right">
+      <!-- Optional: Can add social icons or search here -->
+    </div>
+  </header>
+
+  <!-- Main Article Content -->
+  <main class="e-con">
+    <div class="article-header">
+      <div class="article-text-content">
+        <span class="article-category">Parenting Guide</span>
+        <h1 class="article-title">Is Your Child Ready for Preschool? A Guide to Mindful Early Learning</h1>
       </div>
-      <div class="faq-answer">
-        <strong>A:</strong> For toddlers and young children, a ratio of 1:10 or better is considered ideal to ensure every child receives personalized attention and emotional support.
+      <div class="article-image">
+        <img src="/ready.png" alt="Child ready for preschool - happy child playing with educational toys">
       </div>
     </div>
-    
-    <div class="faq-item">
-      <div class="faq-question">
-        <div class="faq-icon">Q</div>
-        <strong>Q: How do I know if a "preschool near me" is truly safe?</strong>
+
+    <div class="article-content">
+      <div class="highlight-stat">
+        <div class="stat-number">90%</div>
+        <div class="stat-text">of a child's brain develops before the age of five</div>
       </div>
-      <div class="faq-answer">
-        <strong>A:</strong> Look for essential security features such as CCTV surveillance, background-verified staff, child-proofed furniture, and strict protocols for emergency response and safe pick-up/drop-off.
+
+      <p>This staggering fact highlights why choosing the right environment during these foundational years is one of the most significant decisions a parent will ever make. For many families, the search for a "preschool near me" isn't just about finding a convenient location in Bangalore or Vellore—it is about finding a sanctuary that understands the weight of this responsibility.</p>
+
+      <h2>Understanding the Emotional Readiness of Your Little Bee</h2>
+      <p>When exploring top kindergarten schools in Bangalore, it is essential to consider your child's emotional readiness rather than just age. Some children adapt quickly to new environments, while others need more reassurance and time. At AniBee Preschool, we move beyond the standard search for a "preschool near me" by focusing on a smooth transition that fights separation anxiety through immersion in joyful activities. We recognize that mothers—both working and homemakers—often feel overwhelmed by choices; our goal is to provide a stress-free space where children feel successful in their first attempts at independence.</p>
+
+      <h2>Why Holistic Development Matters More Than Competition</h2>
+      <p>The best preschools in Bangalore are shifting focus from rigid instruction to holistic development. At AniBee, we don't encourage competition between children; instead, we inspire them to be better versions of themselves, pushing their own boundaries at their own pace. Our curriculum balances academic readiness with critical social and emotional growth.</p>
+      
+      <h3>Key Development Areas:</h3>
+      <ul>
+        <li><strong>Language Skills:</strong> We foster communication through games like "Who is your best friend?" or discussing weekend adventures.</li>
+        <li><strong>Physical Strength:</strong> Activities such as "Bicycling in laydown position" or "Scissors activities" refine motor skills.</li>
+        <li><strong>Life Skills:</strong> We teach toddlers practical habits like "Folding the napkin" or "Identifying man-made and natural things" to build real-world confidence.</li>
+      </ul>
+
+      <div class="quote-box">
+        At AniBee, we don't encourage competition between children; instead, we inspire them to be better versions of themselves, pushing their own boundaries at their own pace.
+      </div>
+
+      <h2>Mindful Practices to Secure Your Child's Future</h2>
+      <p>We believe the experiences a child has in these early years define their life choices later on. This is why we incorporate mindful practices into our daily routine to provide a stable, trauma-informed environment. From teaching kids to "chew with their mouth closed" to learning how to "empathize with others," we nurture the heart alongside the mind. Safety is a non-negotiable priority, with secure entries and CCTV monitoring ensuring your child is in safe hands while you focus on your day.</p>
+
+      <h2>Conclusion: Trusting Your Journey with AniBee</h2>
+      <p>Choosing a preschool is a significant milestone that requires looking beyond flashy facilities to find a safe, nurturing environment guided by caring educators. By prioritizing a school that respects your child's individuality and encourages curiosity without the pressure of competition, you are giving them the best possible start. At AniBee Preschool, we are dedicated to turning these formative years into a beautiful journey of growth and discovery.</p>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+      <h3 class="faq-title">FAQ: Choosing the Best Preschool in Bangalore</h3>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q">Q</span>
+          <span>What is the ideal teacher-to-child ratio for a preschool?</span>
+        </div>
+        <div class="faq-answer">
+          <strong>A:</strong> For toddlers and young children, a ratio of 1:10 or better is considered ideal to ensure every child receives personalized attention and emotional support.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q">Q</span>
+          <span>How do I know if a "preschool near me" is truly safe?</span>
+        </div>
+        <div class="faq-answer">
+          <strong>A:</strong> Look for essential security features such as CCTV surveillance, background-verified staff, child-proofed furniture, and strict protocols for emergency response and safe pick-up/drop-off.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q">Q</span>
+          <span>Should I choose a school based on academics or play?</span>
+        </div>
+        <div class="faq-answer">
+          <strong>A:</strong> A high-quality program should offer a balanced curriculum that blends play-based exploration with structured learning to foster cognitive, physical, and social-emotional growth.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q">Q</span>
+          <span>How often should the school communicate with parents?</span>
+        </div>
+        <div class="faq-answer">
+          <strong>A:</strong> Transparent and regular communication is key. Look for schools that provide updates via mobile apps, diaries, or regular meetings to keep you involved in your child's progress.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q">Q</span>
+          <span>At what age should my child start preschool?</span>
+        </div>
+        <div class="faq-answer">
+          <strong>A:</strong> Many parents in Bangalore now start their children as early as two years old. However, readiness is individual; a good preschool will offer programs like Play Group, Nursery, LKG, and UKG to suit different developmental stages.
+        </div>
       </div>
     </div>
-    
-    <div class="faq-item">
-      <div class="faq-question">
-        <div class="faq-icon">Q</div>
-        <strong>Q: Should I choose a school based on academics or play?</strong>
-      </div>
-      <div class="faq-answer">
-        <strong>A:</strong> A high-quality program should offer a balanced curriculum that blends play-based exploration with structured learning to foster cognitive, physical, and social-emotional growth.
+
+    <!-- Related Articles -->
+    <div class="related-section">
+      <h3 class="section-title">More Parenting Articles</h3>
+      
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Healthy eating for kids">
+          </div>
+          <div class="card-content">
+            <span class="card-category">Nutrition</span>
+            <h4 class="card-title">Building Healthy Eating Habits in Preschoolers</h4>
+            <p class="card-excerpt">Discover how to create positive food relationships and ensure proper nutrition for growing minds.</p>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Parent-child bonding">
+          </div>
+          <div class="card-content">
+            <span class="card-category">Parenting</span>
+            <h4 class="card-title">Managing Separation Anxiety Smoothly</h4>
+            <p class="card-excerpt">Practical strategies for parents and children to navigate the preschool transition with confidence.</p>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Outdoor learning">
+          </div>
+          <div class="card-content">
+            <span class="card-category">Activities</span>
+            <h4 class="card-title">5 Simple Learning Activities at Home</h4>
+            <p class="card-excerpt">Transform everyday moments into valuable learning experiences with these easy activities.</p>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
       </div>
     </div>
-    
-    <div class="faq-item">
-      <div class="faq-question">
-        <div class="faq-icon">Q</div>
-        <strong>Q: How often should the school communicate with parents?</strong>
-      </div>
-      <div class="faq-answer">
-        <strong>A:</strong> Transparent and regular communication is key. Look for schools that provide updates via mobile apps, diaries, or regular meetings to keep you involved in your child's progress.
-      </div>
+
+    <!-- Newsletter Section -->
+    <div class="newsletter-section">
+      <h3 class="newsletter-title">Weekly Parenting Insights</h3>
+      <p class="newsletter-text">Get expert advice, research-based tips, and practical guidance delivered to your inbox. No spam, just valuable insights for your parenting journey.</p>
+      <form class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+        <button type="submit" class="newsletter-button">
+          Subscribe <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
     </div>
-    
-    <div class="faq-item">
-      <div class="faq-question">
-        <div class="faq-icon">Q</div>
-        <strong>Q: At what age should my child start preschool?</strong>
-      </div>
-      <div class="faq-answer">
-        <strong>A:</strong> Many parents in Bangalore now start their children as early as two years old. However, readiness is individual; a good preschool will offer programs like Play Group, Nursery, LKG, and UKG to suit different developmental stages.
-      </div>
-    </div>
-  </div>
-</div>
+  </main>
 
-<!-- BRAND MARQUEE SECTION -->
-<section class="brand-marquee">
-  <div class="marquee-track">
-    <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Classroom">
-    <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b5d70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Play Time">
-    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Activities">
-    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Learning">
-    <img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Classroom">
-    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Play Time">
-  </div>
+  <!-- Footer -->
+  <footer class="blog-footer">
+    <p class="footer-text">© 2023 AniBee Preschool. All Rights Reserved. | Where Little Minds Grow with Care</p>
+  </footer>
 
-  <div class="brand-overlay">
-    <img src="logo.jpeg" alt="AniBee Logo">
-    <h3>AniBee Preschool</h3>
-    <p>Where little minds grow with care</p>
-  </div>
-</section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scroll for internal links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if(targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if(targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
 
-<section class="blog-grid container">
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
-    <span class="tag">Nutrition</span>
-    <h3>Healthy Eating Habits for Preschoolers</h3>
-    <p>Nutrition tips to support your child's growth and development.</p>
-    <a href="#" class="read">Read more →</a>
-  </article>
+      // Newsletter form submission
+      const newsletterForm = document.querySelector('.newsletter-form');
+      if(newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const emailInput = this.querySelector('.newsletter-input');
+          if(emailInput.value) {
+            alert(`Thank you for subscribing with ${emailInput.value}! You'll receive our next parenting insights soon.`);
+            emailInput.value = '';
+          }
+        });
+      }
 
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
-    <span class="tag">Activities</span>
-    <h3>5 Simple Learning Activities at Home</h3>
-    <p>Everyday moments that support learning.</p>
-    <a href="#" class="read">Read more →</a>
-  </article>
-  
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
-    <span class="tag">Outdoor Learning</span>
-    <h3>The Benefits of Outdoor Play</h3>
-    <p>Why nature is the best classroom for young children.</p>
-    <a href="#" class="read">Read more →</a>
-  </article>
-</section>
+      // Animation for elements on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
 
-<section class="newsletter">
-  <h3>Weekly Parenting Tips</h3>
-  <p>No spam. Just useful ideas.</p>
-  <form>
-    <input type="email" placeholder="Your email address" required>
-    <button type="submit">Subscribe</button>
-  </form>
-</section>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
 
-<footer>
-  <p>© 2026 AniBee Preschool. All rights reserved.</p>
-</footer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if(targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if(targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 100,
-            behavior: 'smooth'
-          });
-        }
+      // Animate blog cards and sections
+      const animateElements = document.querySelectorAll('.blog-card, .highlight-stat, .faq-section');
+      animateElements.forEach((element, index) => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        element.style.transitionDelay = (index * 0.1) + 's';
+        observer.observe(element);
       });
     });
-    
-    // Highlight current section in view
-    const observerOptions = {
-      threshold: 0.2,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-    
-    // Animate content sections
-    const contentSections = document.querySelectorAll('.article-content h2, .article-content .highlight-box, .faq-section');
-    contentSections.forEach((section, index) => {
-      section.style.opacity = '0';
-      section.style.transform = 'translateY(20px)';
-      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      section.style.transitionDelay = (index * 0.1) + 's';
-      observer.observe(section);
-    });
-    
-    // Newsletter form submission
-    const newsletterForm = document.querySelector('.newsletter form');
-    if(newsletterForm) {
-      newsletterForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const emailInput = this.querySelector('input[type="email"]');
-        if(emailInput.value) {
-          alert('Thank you for subscribing to AniBee Parenting Tips! You will receive our next newsletter soon.');
-          emailInput.value = '';
-        }
-      });
-    }
-  });
-</script>
+  </script>
 </body>
-
 </html>
