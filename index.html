@@ -402,43 +402,94 @@
       font-weight: 600;
       color: var(--green);
     }
+
+    /* HEADER FIX – RESPONSIVE & LOGO LEFT */
+.site-header {
+  background: var(--cream);
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 24px 16px;
+}
+
+.header-left,
+.header-right {
+  flex: 1;
+}
+
+.header-left img {
+  width: 140px;
+  height: auto;
+}
+
+.header-center {
+  flex: 2;
+  text-align: center;
+}
+
+.header-center h1 {
+  font-family: 'Fredoka One', cursive;
+  color: var(--green);
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.header-center p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  .header-left img {
+    width: 120px;
+  }
+
+  .header-center h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .site-header {
+    padding: 16px;
+  }
+
+  .header-left img {
+    width: 100px;
+  }
+
+  .header-center h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-center p {
+    font-size: 12px;
+  }
+} 
   </style>
 </head>
 
 <body>
 
-<header style="
-  min-height:120px;
-  display:flex;
-  align-items:center;
-  padding:32px 24px;
-  position:relative;
-">
-
-  <!-- LEFT: LOGO -->
-  <img 
-    src="logo.jpeg"
-    alt="AniBee Logo"
-    style="width: 160px; height:auto;"
-  >
-
-  <!-- CENTER: TEXT -->
-  <div style="
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
-    text-align:center;
-  ">
-    <h1 style="margin:0; font-size:27px;">
-      AniBee Blog
-    </h1>
-    <p style="margin:2px 0 0; font-size:14px; color:#555;">
-      Ideas that support your child's early years
-    </p>
+<header class="site-header">
+  <!-- LEFT: Logo -->
+  <div class="header-left">
+    <img src="logo.jpeg" alt="AniBee Logo">
   </div>
 
-</header>
+  <!-- CENTER: Text -->
+  <div class="header-center">
+    <h1>AniBee Blog</h1>
+    <p>Ideas that support your child's early years</p>
+  </div>
 
+  <!-- RIGHT: Spacer (keeps center aligned) -->
+  <div class="header-right"></div>
+</header>
+  
 <section class="hero">
   <h2>The AniBee Journal</h2>
   <p>Trusted parenting tips and early learning guidance.</p>
@@ -664,4 +715,5 @@
   });
 </script>
 </body>
+
 </html>
